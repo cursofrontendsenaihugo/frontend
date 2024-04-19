@@ -3,7 +3,7 @@
 /* PARA FAZER COMENTÁRIO É UTILIZADO ISTO */
 
 /* PARA FAZER O TEMA DARK E CORES DO TEXTO E BACKGROUND*/
-:root, :root ´[data-theme='dark'] {
+:root, :root [data-theme='dark'] {
     --primary-color: #f0f0f0; /*COR DE TEXTO*/
     --secondary-color: #d82424; /*SEGUNDA COR DE TEXTO*/
     --primary-bg-color: #111217; /*COR DE FUNDO*/
@@ -69,6 +69,8 @@ body {
     color: var(--text-color);
 }
 
+/* Conteúdo extra */ 
+
 #header {
     display: flex;
     flex-flow: row wrap;
@@ -84,4 +86,7 @@ body {
     justify-content: flex-end;
 }
 
-
+.header-logo .logo {
+    width: 3.25rem;
+    height: 3.25rem;
+}

@@ -53,10 +53,20 @@ html [data-theme='light'] .tecnologias-logo{
 /* (*) significa reset do CSS */
 
 * {
-    margin: 0; /*margem*/
-    padding: 0; /*preenchimento//espaçamento*/
+    margin: 0px; /*margem*/
+    padding: 0px; /*preenchimento//espaçamento*/
     box-sizing: border-box;
-    vertical-align: baseline;
+    /* 
+    A propriedade box-sizing em CSS é usada para alterar o modelo de caixa de um elemento.
+    O valor border-box é usado para garantir que a largura e a altura de um elemento
+    incluam as bordas e o preenchimento, em vez de apenas o conteúdo.
+    Quando você define box-sizing: border-box;, está dizendo ao navegador
+    para calcular a largura e a altura total de um elemento,
+    incluindo a largura das bordas e o preenchimento, e não apenas o conteúdo.
+    */
+   
+
+   /* vertical-align: baseline; */
     list-style: none;
     scrollbar-width: thin;
     scrollbar-color: var(--secondary-bg-color) transparent;
@@ -70,11 +80,67 @@ body {
 }
 
 /* Conteúdo extra */ 
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover{
+    color: var(--primary-color);
+}
+
+i{
+    color: var(--icon-color);
+}
+
+b{
+    font-weight: 400;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+h4{
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 1.15rem;
+    text-align: left;
+}
+
+h1, h2, h3{
+    font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 200;
+}
+
+p, span, li {
+    font-size: 1rem;
+}
+
+p{
+    text-align: justify;
+}
 
 #header {
     display: flex;
     flex-flow: row wrap;
+    /* Coloca o conteúdo em linha e permite a quebra de linha. */
     justify-content: space-between;
+    /* Os itens dentro do container flexível serão distribuídos de maneira uniforme ao longo do eixo principal, com espaços iguais entre eles.  */
     align-items: center;
     width: 100%;
     padding: 0.5rem 1rem;
@@ -100,8 +166,11 @@ body {
 
 .menu{
     display: flex;
+    /*  Torna o elemento um flex container automaticamente
+    transformando todos os seus filhos diretos em flex itens */
     align-items: center;
     background-color: var(--primary-bg-color);
+    gap: 1rem;
 }
 
 .menu-item{
@@ -110,8 +179,13 @@ body {
 
 .menu-link{
     display: flex;
+    /*  Torna o elemento um flex container automaticamente
+    transformando todos os seus filhos diretos em flex itens */
     align-items: center;
     gap: .5rem; /* Testar depois */
+    /* usada para definir o espaço entre os elementos
+    criar espaçamento uniforme entre os elementos
+    */
 }
 
 .menu-mobile{
@@ -131,7 +205,7 @@ body {
 .menu-link.active .menu-icon,
 .menu-link.active .menu-text,
 .menu-link:hover .menu-icon,
-.menu-link:hover .menu-text{
+.menu-link:hover .menu-text{  /* a:hover = pseudo-classe  */
     color: var(--primary-color);
 }
 
@@ -141,4 +215,37 @@ body {
 
 .menu-icon{
     font-size: 1.5rem;
+}
+
+.menu-text{
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/* .header-nav{ 
+    display: ; 
+} */
+
+.menu-principal{
+    gap: 1rem;
+}
+
+.menu-social{
+    gap: 1rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+    color: var(--primary-color);
+
 }

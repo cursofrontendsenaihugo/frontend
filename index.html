@@ -16,6 +16,7 @@
 <body>
     <header id="header"> <!-- cabeçalho -->
         <nav class="header-nav"> <!-- menu -->
+        <!-- "header-nav" - Isso pode ser útil quando você deseja oculta a navegação de um cabeçalho, por exemplo, em certos dispositivos ou resoluções de tela. -->
             <ul class="menu menu-principal">
                 <li class="menu-item"> <!-- li = lista -->
                     <a href="#home" class="menu-link active">
@@ -29,12 +30,12 @@
                 </li>
                 <li class="menu-item">
                     <a href="#sobre" class="menu-link"> 
-                        Sobre 
+                        <span class="menu-text"> Sobre </span> 
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="#contato" class="menu-link"> 
-                        Contato 
+                        <span class="menu-text"> Contato </span> 
                     </a>
                 </li>
             </ul>
@@ -51,6 +52,81 @@
     </header> <!-- fim cabeçalho -->
     
     <!-- buscar icone no bootstrap | Site | https://icons.getbootstrap.com/ -->
+
+    <!--início menu mobile -->
+
+    <nav class="nav-mobile">
+        <ul class="menu menu-mobile">
+
+            <li class="menu-item">
+                <a class="menu-link active" href="#home">
+                    <i class="menu-icon bi bi-house-door"></i>
+                    <span class="menu-text"> Home </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a class="menu-link" href="#projetos">
+                    <i class="menu-icon bi bi-window-stack"></i>
+                    <span class="menu-text"> Projetos </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a class="menu-link" href="#sobre">
+                    <i class="menu-icon bi bi-person"></i>
+                    <span class="menu-text"> Sobre </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a class="menu-link" href="#contato">
+                    <i class="menu-icon bi bi-envelope"></i>
+                    <span class="menu-text"> Contato </span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!--fim menu mobile -->
+
+    <main id="home">
+        <div class="main-content">
+
+            <h1> <b> Soluções Criativas & </b> Dev Front-End</h1>
+            <p>Hugo Andrade, São Paulo - SP, Desenvolvedor Front-End</p>
+            <ul class="menu menu-social">
+                <li>
+                    <a class="menu-link" href="https://github.com/cursofrontendsenaihugo" target="_blank">
+                        <i class="menu-icon bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-link" href="" target="_blank">
+                        <i class="menu-icon bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-link" href="" target="_blank">
+                        <i class="menu-icon bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-link" href="" target="_blank">
+                        <i class="menu-icon bi bi-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <a href="#projetos">
+                <button class="btn btn-primary"></button>
+                    <span>Ver Projetos</span>
+                    <i class="bi bi-arrow-down-right"></i>
+            </a>
+
+        </div>
+    </main>
 
 </body>
 </html>

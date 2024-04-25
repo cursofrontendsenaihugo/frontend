@@ -190,7 +190,7 @@ p{
 
 .menu-mobile{
     width: 100vw; /* V W = viewport width */
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--primary-border-color);
@@ -237,7 +237,7 @@ p{
 .btn{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     gap: 0.625rem;
     width: 100%;
     background: transparent;
@@ -247,5 +247,82 @@ p{
     transition: ease-in-out .3s;
     cursor: pointer;
     color: var(--primary-color);
+}
 
+.btn:hover{
+    transform: scale(1.05);
+    transition: ease-in-out .3s;
+}
+
+.btn span, .btn i{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.btn-primary span{
+    color: var(--primary-color);
+}
+
+.btn-primary{
+    border: 1px solid var(--primary-color);
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.video iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#home, .projetos, .sobre, .contato{
+    padding: 2.5rem 1rem;
+}
+
+.tecnologias{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 6.25rem 1rem 2rem;
+    background: var(--secondary-bg-color);
+    margin-top: -5.5rem;
+}
+
+.tecnologias h2{ /* texto do H2 no site, abaixo do vídeo */
+    font-size: 2rem;
+    text-transform: none;
+    letter-spacing: normal;
+    text-align: start;
+}
+
+.tecnologias-lista{
+    display: flex;
+    flex-flow: row wrap;
+    gap: .5rem;
+}
+
+.tecnologia-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 1px solid var(--secundary-border-color);
+    border-radius: 5rem;
+}
+
+.tecnologia-logo{
+    height: 2.4rem;
 }

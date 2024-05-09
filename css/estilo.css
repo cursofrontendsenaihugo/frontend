@@ -3,7 +3,7 @@
 /* PARA FAZER COMENTÁRIO É UTILIZADO ISTO */
 
 /* PARA FAZER O TEMA DARK E CORES DO TEXTO E BACKGROUND*/
-:root, :root [data-theme='dark'] {
+:root, :root[data-theme='dark'] {
     --primary-color: #f0f0f0; /*COR DE TEXTO*/
     --secondary-color: #d82424; /*SEGUNDA COR DE TEXTO*/
     --primary-bg-color: #111217; /*COR DE FUNDO*/
@@ -18,7 +18,7 @@
 
 }
 
-:root [data-theme='light'] {
+:root[data-theme='light'] {
     --primary-color: #0b0b0f;
     --primary-bg-color: #e9e9e9;
     --secondary-bg-color: #c7c8c9;
@@ -42,11 +42,11 @@ Isso oferece uma maneira flexível de definir valores
 que podem ser reutilizados em todo o seu CSS e facilmente atualizados de um único lugar.
 */
 
-html [data-theme='light'] .brand-logo{
+html[data-theme='light'] .logo{
     filter: invert(1);
 }
 
-html [data-theme='light'] .tecnologias-logo{
+html[data-theme='light'] .tecnologias-logo{
     filter: invert(80%);
 }
 
@@ -66,14 +66,14 @@ html [data-theme='light'] .tecnologias-logo{
     */
    
 
-   /* vertical-align: baseline; */
+    vertical-align: baseline;
     list-style: none;
     scrollbar-width: thin;
     scrollbar-color: var(--secondary-bg-color) transparent;
 
 }
 
-body {
+body{
     background: var(--primary-bg-color);
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
@@ -127,7 +127,7 @@ h1, h2, h3{
     font-weight: 200;
 }
 
-p, span, li {
+p, span, li{
     font-size: 1rem;
 }
 
@@ -135,7 +135,7 @@ p{
     text-align: justify;
 }
 
-#header {
+#header{
     display: flex;
     flex-flow: row wrap;
     /* Coloca o conteúdo em linha e permite a quebra de linha. */
@@ -147,12 +147,12 @@ p{
     z-index: 2;
 }
 
-.header-logo .logo {
+.header-logo .logo{
     width: 3.25rem;
     height: 3.25rem;
 }
 
-.header-toggle {
+.header-toggle{
     display: flex;
     justify-content: flex-end;
 }
@@ -189,7 +189,7 @@ p{
 }
 
 .menu-mobile{
-    width: 100vw; /* V W = viewport width */
+    width: 100vw; /* V W = viewport width adequa todos os dispostivos */
     position: fixed;
     bottom: 0;
     justify-content: space-between;
@@ -222,9 +222,9 @@ p{
     text-transform: uppercase;
 }
 
-/* .header-nav{ 
-    display: ; 
-} */
+.header-nav{ 
+    display: none; /*HEADERNAV OCULTA O MENU DESKTOP QUANDO ESTIVER NO MOBILE*/
+} 
 
 .menu-principal{
     gap: 1rem;
@@ -556,7 +556,7 @@ footer p{
 
 /*Responsividade */
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { /*Tudo após o 768*/
     #header {
         position: fixed;
         border-bottom: 1px solid var(--primary-border-color);
@@ -589,7 +589,133 @@ footer p{
         padding: 8rem 6rem 4rem 6rem;
     }
 
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tecnologias{
+        padding: 6.25rem 6rem 2rem 6rem;
+        margin-top: -6rem;
+    }
     .contato{
         padding: 6rem;
+    }
+    .contato p{
+        width: 80%;
+    }
+
+    footer{ 
+        margin: 0;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .projeto-card{
+        flex-direction: row;
+    }
+    
+    .projeto-card.card-reverse{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .card-cover{
+        width: 55%;
+    }
+
+    .sobre{
+        gap: 5rem;
+    }
+
+    .sobre-content1, .sobre-content2{
+        display: grid;
+        grid-template-columns: 34% 60%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .sobre-descricao h2{
+        text-align: left;
+    }
+
+    .descricao-button{
+        justify-content: flex-start;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    h2{
+        font-size: 4rem;
+    }
+
+    h3{
+        font-size: 2.5rem;
+    }
+
+    #home{
+        padding: 10rem 6rem 2rem;
+    }
+
+    .main-content .btn{
+        width: auto;
+    }
+
+    .tecnologias{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10rem 6rem 4rem;
+    }
+
+    .tecnologias h2{
+        font-size: 3rem;
+        width: 55%;
+    }
+
+    .tecnologias-lista{
+        gap: 1rem;
+    }
+
+    .tecnologia-item{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .tecnologia-logo{
+        height: 3rem;
+    }
+
+    p, span, li{
+        font-size: 1.15rem;
+    }
+
+    .card-button .btn,
+    .descricao-button .btn{
+        width: auto;
+    }
+}
+
+@media (min-width: 1400px){
+    h1{
+        font-size: 6.25rem;
+    }
+
+    h2{
+        font-size: 4.5rem;
+    }
+
+    h3{
+        font-size: 3.25rem;
+    }
+
+    .header{
+        padding: 12rem 15rem 2rem;
+    }
+
+    .tecnologias, .projetos, .sobre{
+        padding: 10rem 15rem 4rem;
     }
 }

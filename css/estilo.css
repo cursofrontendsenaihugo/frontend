@@ -13,7 +13,7 @@
 
     --title-color: #f0f0f0;
     --text-color: #9a9a9c;
-    --link-color: #9a9a9c;
+    --link-color: #ffffff;
     --icon-color: #c7c8c9;
 
 }
@@ -25,8 +25,8 @@
     --primary-border-color: #c7c8c9;
 
     --title-color: #0b0b0f;
-    --text-color: #28292e;
-    --link-color: #28292e;
+    --text-color: #7a7a83;
+    --link-color: #000000;
     --icon-color: #56575a;
 
 }
@@ -46,7 +46,7 @@ html[data-theme='light'] .logo{
     filter: invert(1);
 }
 
-html[data-theme='light'] .tecnologias-logo{
+html[data-theme='light'] .tecnologia-logo{
     filter: invert(80%);
 }
 
@@ -206,7 +206,7 @@ p{
 .menu-link.active .menu-text,
 .menu-link:hover .menu-icon,
 .menu-link:hover .menu-text{  /* a:hover = pseudo-classe  */
-    color: var(--primary-color);
+    color: var(--link-color);
 }
 
 .menu-icon, .menu-text{
